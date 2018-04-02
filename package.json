@@ -46,7 +46,8 @@
     "prebuild": "npm run lint",
     "build": "rollup --config",
     "prepublish": "npm run build",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "postinstall": "npm run build"
   },
   "main": "dist/apollo-upload-server.js",
   "module": "dist/apollo-upload-server.module.js",

@@ -20,7 +20,7 @@ export function processRequest(request, { uploadDir } = {}) {
       // enabled.
       try {
         operations = JSON.parse(operations)
-      } catch (err){
+      } catch (err) {
         reject(err)
         return
       }
@@ -56,11 +56,13 @@ export function apolloUploadExpress(options) {
   return (request, response, next) => {
     // Skip if there are no uploads
     if (!request.is('multipart/form-data')) return next()
-    processRequest(request, options).then(body => {
-      request.body = body
-      next()
-    }).catch(err => {
-      response.status(500).json({ message: err.message })
-    })
+    processRequest(request, options)
+      .then(body => {
+        request.body = body
+        next()
+      })
+      .catch(err => {
+        response.status(500).json({ message: err.message })
+      })
   }
 }
