@@ -1,19 +1,17 @@
 {
-  "name": "apollo-upload-server",
+  "name": "jamplay-apollo-upload-server",
   "version": "2.0.4",
   "description": "Enhances Apollo GraphQL Server for intuitive file uploads via GraphQL mutations.",
   "license": "MIT",
-  "author": {
-    "name": "Jayden Seric",
-    "email": "me@jaydenseric.com",
-    "url": "http://jaydenseric.com"
-  },
+  "author": "Jayden Seric <me@jaydenseric.com> (http://jaydenseric.com)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jaydenseric/apollo-upload-server.git"
+    "url": "git+https://github.com/jaydenseric/apollo-upload-server.git"
   },
   "homepage": "https://github.com/jaydenseric/apollo-upload-server#readme",
-  "bugs": "https://github.com/jaydenseric/apollo-upload-server/issues",
+  "bugs": {
+    "url": "https://github.com/jaydenseric/apollo-upload-server/issues"
+  },
   "keywords": [
     "apollo",
     "graphql",
