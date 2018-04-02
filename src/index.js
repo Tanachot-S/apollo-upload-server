@@ -18,7 +18,12 @@ export function processRequest(request, { uploadDir } = {}) {
 
       // Decode the GraphQL operation(s). This is an array if batching is
       // enabled.
-      operations = JSON.parse(operations)
+      try {
+        operations = JSON.parse(operations)
+      } catch (err){
+        reject(err)
+        return
+      }
 
       // Check if files were uploaded
       if (Object.keys(files).length) {
@@ -54,6 +59,8 @@ export function apolloUploadExpress(options) {
     processRequest(request, options).then(body => {
       request.body = body
       next()
+    }).catch(err => {
+      response.status(500).json({ message: err.message })
     })
   }
 }
