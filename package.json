@@ -1,6 +1,6 @@
 {
   "name": "jamplay-apollo-upload-server",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Enhances Apollo GraphQL Server for intuitive file uploads via GraphQL mutations.",
   "license": "MIT",
   "author": "Jayden Seric <me@jaydenseric.com> (http://jaydenseric.com)",
@@ -44,8 +44,7 @@
     "prebuild": "npm run lint",
     "build": "rollup --config",
     "prepublish": "npm run build",
-    "precommit": "lint-staged",
-    "postinstall": "npm run build"
+    "precommit": "lint-staged"
   },
   "main": "dist/apollo-upload-server.js",
   "module": "dist/apollo-upload-server.module.js",
